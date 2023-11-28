@@ -1,0 +1,30 @@
+:root {
+    --main-font-style: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    /* --main-color: #3415d0; */
+    /* --main-color: #120266; */
+    --main-color: rgb(0, 0, 0);
+    /*#060b0f :  */
+    --pre-black-color:#00000062;
+    --dark-color: #101010;
+    --white-color: #ffffff;
+    --new-color: #1a1a1a;;
+    --purple-color: #383274;
+    --dark-purple-color: #15132b;
+    --gray-color: #2e2e2e;
+    --black-color: #1a1a1a;
+    --gray2-color: #4c4c4b;
+    --gray3--color: #8f8d8d;
+    --white2-color: #ddd;
+
+    --main-gradient: linear-gradient(45deg, #0f0c29, #302b63,#24243e);
+    --t-gradient: linear-gradient(45deg, #232526, #414345);
+    --theme-gradient: linear-gradient(45deg, #04030b, #15132b,#12121e);
+    
+    /* --main-transitation: 500ms cubic-bezier(0.215, 0.610, 0.355, 1); */
+    --theme-transition: 600ms cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+/* body {
+    500ms cubic-bezier(0.215, 0.610, 0.355, 1)
+    background-color: ;
+} */

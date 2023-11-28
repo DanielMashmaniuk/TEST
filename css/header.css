@@ -1,0 +1,109 @@
+.header {
+    background-color: var(--white-color);
+    height: 5%;
+    text-align: center;  
+    transition: var(--theme-transition);
+
+
+}
+
+.container_header {
+    padding: 2%;
+    display: flex;
+    border-bottom: 0.5px solid #000000;
+    justify-content: space-between; 
+    text-align: center;
+    width: 100%;
+    transition: var(--theme-transition);
+
+
+}
+.icon-menu {
+    display: flex;
+    margin-left: 12.5px;
+    fill: var(--white-color);
+    width: 35px;
+    height: 35px;
+    transition: var(--theme-transition);
+}
+.icon-menus {
+    display: flex;
+    margin-left: 12.5px;
+    fill: var(--white-color);
+    width: 35px;
+    height: 35px;
+    transition: var(--theme-transition);
+}
+.icon-menu:hover {
+    transform: scale(1.2);
+
+}
+.header-button {
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    border: 0;
+    background: var(--main-gradient);
+    background-size: 200% 200%;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
+.logo_name {
+    background: var(--main-gradient);
+    background-size: 200% 200%;
+    color: var(--white-color);
+    border-radius: 10px;
+    font-size: 3em;
+    font-family: var(--main-font-style);
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 8px 10px 15px 2px rgba(0, 0, 0, 0.25);;
+    transition: var(--theme-transition);
+    animation: gradient-animation 3s ease-in-out infinite;
+
+}
+.header_letter {
+    padding-left: 8px;
+    padding-right: 8px;
+    transition: var(--theme-transition);
+}
+.header_letter:hover {
+    /* color: var(--new-color); */
+    transform: rotate(45deg);
+}
+.mood_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.mood_section--button  {
+    border: 0;
+    background-color: var(--white-color);
+    cursor: pointer;
+    transition: var(--theme-transition);
+    
+}
+.smile {
+    fill: var(--main-gradient);
+    padding: 5px;
+    transition: var(--theme-transition);
+}
+.light-smile {
+    fill: var(--white-color);
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    transition: var(--theme-transition);
+}
+.dark-smile {
+    fill: var(--dark-purple-color);
+    width: 40px;
+    height: 40px;
+    transition: var(--theme-transition);
+}
+.smile:hover {
+    transform: translateY(-20px) scale(1.2);
+}

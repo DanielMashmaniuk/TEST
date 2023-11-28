@@ -1,0 +1,294 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -30%;
+    width: 30%;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+    background: var(--main-gradient);
+    background-size: 200% 200%;
+    color: var(--white-color);
+    transition:2000ms linear(0 0%, 0.22 2.1%, 0.86 6.5%, 1.11 8.6%, 1.3 10.7%, 1.35 11.8%, 1.37 12.9%, 1.37 13.7%, 1.36 14.5%, 1.32 16.2%, 1.03 21.8%, 0.94 24%, 0.89 25.9%, 0.88 26.85%, 0.87 27.8%, 0.87 29.25%, 0.88 30.7%, 0.91 32.4%, 0.98 36.4%, 1.01 38.3%, 1.04 40.5%, 1.05 42.7%, 1.05 44.1%, 1.04 45.7%, 1 53.3%, 0.99 55.4%, 0.98 57.5%, 0.99 60.7%, 1 68.1%, 1.01 72.2%, 1 86.7%, 1 100%);
+    z-index: 5;
+    overflow-y: auto;
+    animation: gradient-animation 3s ease-in-out infinite;
+
+  }
+
+  .header-text{
+    margin-top: -10px;
+    text-align: center;
+    font-size: 24px;
+    color: var(--gray2-color);
+    font-style: italic;
+    left: -150px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.header-text span {
+    display: inline-block;
+    position: relative;
+}
+.header-text:hover {
+    color: var(--purple-color);
+}
+.close {
+    height: 20px;
+    width: 20px;
+}
+.close-button {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    border: none;
+    cursor: pointer;
+    /* transition: color 0.3s ease-in-out,transform 0.3s ease-in-out; */
+}
+.login-button{
+        border: none;
+        outline: none;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 12px 16px;
+        border-radius: 100px;
+        color: var(--gray3--color);
+        background-color: var(--gray-color);
+}
+
+.login-button:hover{
+    background-color: var(--gray2-color);
+    transition: 0.4s;
+}
+.profile {
+    height: 80px;
+    width: 80px;
+}
+.register-button{
+    border: none;
+    outline: none;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px 16px;
+    border-radius: 100px;
+    color: var(--gray3--color);
+    background-color: var(--gray-color); ;
+}
+.register-button:hover{
+    background-color: var(--gray2-color);
+    transition: 0.4s;
+}
+.header_section--sidebar {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: var(--black-color);
+    position: relative;
+}
+.profile-icon {
+    height: 40px;
+    width: 40px;
+}
+
+.close-button:hover {
+    transform: scale(1.3) rotate(360deg);
+    color: var(--purple-color);
+}
+
+.sidebar-content {
+    padding: 15px;
+}
+
+.centered-text {
+    text-align: center;
+    font-size: 24px;
+    color: var(--gray2-color);
+    font-style: italic;
+    position: relative;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.new-chat {
+    min-width: 200px;
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5%;
+}
+
+.new-chat-button {
+    border-radius: 20px;
+    margin-top: -110px;
+    padding: 10px;
+    text-align: center;
+    width: 70%;
+    background-color: var(--black-color);
+    color: var(--gray2-color);
+    border: none;
+    cursor: pointer;
+}
+
+.new-chat-button:hover {
+    background-color: var(--gray3--color);
+}
+
+.restore-chat-button {
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 70%;
+    background-color: var(--gray-color);
+    color: var(--gray2-color);
+    border: none;
+    cursor: pointer;
+}
+
+.restore-chat-button:hover {
+    background-color: var(--gray3--color);
+}
+
+.footer {
+    position: absolute;
+    height: 10%;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--black-color);
+    text-align: center;
+    padding: 3%;
+    border-radius: 20px 0px 0px 0px;
+}
+
+.centered-text span {
+    display: inline-block;
+    position: relative;
+    
+}
+.centered-text:hover {
+    color: var(--purple-color);
+}
+
+.centered-text:hover span:nth-child(1) {
+    animation: scaleAnimation 1.5s infinite alternate 0.0s; 
+}
+
+.centered-text:hover span:nth-child(2) {
+    animation: scaleAnimation 1.5s infinite alternate 0.2s; 
+}
+
+.centered-text:hover span:nth-child(3) {
+    animation: scaleAnimation 1.5s infinite alternate 0.4s; 
+}
+
+.centered-text:hover span:nth-child(4) {
+    animation: scaleAnimation 1.5s infinite alternate 0.6s; 
+}
+
+.centered-text:hover span:nth-child(5) {
+    animation: scaleAnimation 1.5s infinite alternate 0.8s; 
+}
+.centered-text:hover span:nth-child(7) {
+    animation: scaleAnimation 1.5s infinite alternate 1.0s; 
+}
+.centered-text:hover span:nth-child(8) {
+    animation: scaleAnimation 1.5s infinite alternate 1.2s; 
+}
+
+
+
+@keyframes scaleAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.developers_section {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.developers_names {
+    font-size: 1.25em;
+    padding-top: 1.5em;
+    width: 100%;
+    text-align: center;
+}
+
+.developers_name {
+    padding: 0.5em 0px 0.1em 0px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--white-color);
+    font-family: var(--main-font-styles);
+}
+
+.developers_icons--section {
+    display: flex;
+    flex-direction: column;
+}
+
+.developers_button--icon {
+    width: 2em;
+    height: 2em;
+    fill: var(--white-color);
+}
+.sidebar.light-theme {
+    background-color: var(--white-color);
+    color: var(--main-color);
+}
+
+.sidebar.light-theme .header_section--sidebar {
+    background-color: var(--white2-color);
+}
+
+.sidebar.light-theme .close-button {
+    background-color: var(--white2-color);
+}
+
+.sidebar.light-theme .new-chat-button,
+.sidebar.light-theme .restore-chat-button {
+    background-color: var(--white-color);
+    color: var(--main-color);
+}
+
+.sidebar.light-theme .footer {
+    background-color: var(--white2-color);
+    color: var(--main-color);
+}
+
+.sidebar.light-theme .developers_name {
+    color: var(--main-color);
+}
+.sidebar.light-theme .theme-toggle-button button {
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+.sidebar.dark-theme .theme-toggle-button button {
+    background-color: var(--white-color);
+    color: var(--main-color);
+}
+@media screen and (max-width: 768px){
+    .sidebar {
+        border-radius: 3px;
+        transition:1500ms linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%);
+
+    }
+  }

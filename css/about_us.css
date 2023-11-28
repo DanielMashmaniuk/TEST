@@ -1,0 +1,128 @@
+html {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+  
+  *,
+  *::after,
+  *::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+::-webkit-scrollbar {
+  width: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    transition: var(--theme-transition);
+}
+.button--icon {
+    width: 40px;
+    height: 40px;
+}
+.button {
+  border: 0;
+  background-color: var(--white-color);
+}
+ul {
+  list-style-type: disc; /* Стиль маркерів - круглі крапки */
+  margin: 0; /* Зовнішні відступи списку (зверху і знизу) */
+  padding: 0; /* Внутрішні відступи (зліва) */
+}
+body {
+    background-color: var(--white-color);
+    font-family: Arial, sans-serif;
+}
+.about_container{
+    
+    padding: 15px 25px 5px 25px;
+    transition: var(--theme-transition);
+
+
+}
+.icon-home {
+    fill: var(--white-color);
+    height: 40px;
+    width: 40px;
+    transition: var(--theme-transition);
+
+}
+.icon-home:hover {
+    transform: scale(1.2);
+}
+.button-header-button{  
+    height: 60px;
+    width: 60px; 
+    border: none;
+    border-radius: 50%;
+    box-shadow: 8px 10px 15px 2px rgba(0, 0, 0, 0.25);
+    background: var(--main-gradient);
+    transition: var(--theme-transition);
+
+}
+
+h1 {
+    color: var(--white-color);
+    font-size: 25px; 
+    transition: var(--theme-transition);
+
+}
+
+.team-member {
+    background: var(--main-gradient);
+    background-size: 200% 200%;
+    /* border: 2px solid #000;  */
+    box-shadow: 8px 10px 15px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px; 
+    padding: 15px;
+    margin-bottom: 30px;
+    transition: var(--theme-transition);
+    animation: gradient-animation 4s ease infinite;
+}
+.role-info {
+    color: var(--white-color);
+}
+.work-info {
+    color: var(--white-color);
+    list-style: georgian;
+    column-rule-style: inset;
+    flex: 1;
+    margin-top: 10px;
+    transition: var(--theme-transition);
+
+}
+
+.instagram-link {
+    animation: flicker 2s linear infinite;
+        fill: var(--white-color);
+    margin-left: auto;
+}
+
+.mission-values {
+    color: var(--p-color);
+    margin: 10px 10px 25px 10px;
+    font-size: 35px; 
+}
+.team-title{
+    
+    display: flex;
+    justify-content: space-between;
+    
+}
+.instagram-icon {
+    animation: pulse 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}

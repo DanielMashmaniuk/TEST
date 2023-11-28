@@ -1,0 +1,156 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="/img/icon_archi.svg" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archi</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/dark_style.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <script src="/index.js"></script>
+</head>  
+<body>
+    <div id="container_body" class="container_body">
+        <header id="header" class="header">  
+         
+            <div class="container_header">
+                    <button  id="button" class="button header-button">
+                    <svg id="openSidebar" class="icon-menu ">
+                        <use href="/img/symbol-defs.svg#icon-sidebar-right"></use>
+                    </svg> 
+                </button>
+                <button  id="close-button" class="button header-button" style="display:none">
+                    <svg id="openSidebar" class="icon-menu ">
+                        <use href="/img/symbol-defs.svg#icon-sidebar-left"></use>
+                    </svg> 
+                </button>
+                
+                <!--#icon-menu-->
+                    <div id="letter" class="logo_name">
+                        <span class="header_letter">A</span>
+                        <span class="header_letter">r</span>
+                        <span class="header_letter">c</span>
+                        <span class="header_letter">h</span>
+                        <span class="header_letter">i</span>
+                    </div> 
+                <div class="mood_section">
+                    <button id="lightThemeButton" class="mood_section--button">
+                        <svg id="lightThemeButtonIcon" class="light-smile smile">
+                            <use href="/img/symbol-defs.svg#icon-mood-white"></use>
+                        </svg> 
+                    </button>
+                     <button id="darkThemeButton" class="mood_section--button">
+                        <svg id="darkThemeButtonIcon" class="dark-smile smile">
+                            <use href="/img/symbol-defs.svg#icon-mood-black"></use>
+                        </svg> 
+                    </button>
+                </div>
+            </div>
+        </header>
+    
+        <main id="main" class="main">
+            <div id="container_header" class="main_section">
+                <div id="chat-area" class="chat-area">
+                    <div id="prolog" class="prolog_container" >
+                        <h1 class="prolog_st--h1">Start message</h1>
+                        <h2 class="prolog_st--h2">with Archi</h2>
+                    </div>
+                    <div id="chat" class="chat-messages">
+                        
+                    </div>
+                </div>
+                
+                <div id="input_section" class="input_section">
+                    <button id="main_button_up" class="main_icon--section">
+                        <a href="#header">
+                            <svg id="arrow-up" class="main_icon--arrow">
+                                <use href="/img/symbol-defs.svg#icon-arrow-up"></use>
+                            </svg>
+                        </a>
+                    </button>  
+                    <div id="input_container" class="input_container">
+                        <button id="micro" class="button_main">
+                            <svg id="micro-icon" class="micro main_icon">
+                                <use href="/img/symbol-defs.svg#icon-micro"></use>
+                            </svg>   
+                        </button>
+                            <textarea placeholder="Enter..."class="textarea"id="message-input"name=""cols="30" rows="1"></textarea>
+                        <button class="button_main" id="send-button">
+                            <svg id="paper-plane-icon" class="main_icon">
+                                <use href="/img/symbol-defs.svg#icon-paper-plane"></use>
+                            </svg>   
+                        </button>                   
+                    </div>
+                    <button id="main_button_down" class="main_icon--section">
+                        <a href="#footer">
+                            <svg id="arrow-down" class="main_icon--arrow">
+                                <use href="/img/symbol-defs.svg#icon-arrow-down"></use>
+                            </svg>
+                        </a>
+                    </button>
+                </div>
+                 
+                
+                
+            </div>
+            
+        </main>
+           <!--САЙТБАР-->
+           <div id="sidebar" class="sidebar">
+            <header class="sidebar-content">
+                <div class="header_section--sidebar">
+                    <svg class="profile-icon">
+                        <use href="/img/symbol-defs.svg#icon-user"></use>
+                    </svg> 
+                    <a href="/form_reg_aut/login.ejs">
+                        <button class="login-button">login</button>
+                    </a>
+                    <a href="/form_reg_aut/registration.ejs">
+                        <button id="register" class="register-button">register</button>
+                    </a>
+                    <button class="close-button" style="display: none;">
+                        <svg class="close">
+                            <use href="/img/symbol-defs.svg#icon-close"></use>
+                        </svg> 
+                    </button>
+                </div>
+            </header>
+                <span class="header-text">History</span>
+             <section class="new-chat">
+                 <button class="new-chat-button">➕New Chat</button>
+             </section>
+            <footer id="footer" class="footer">
+                        <a class="footer_button" href="/z.html">
+                            <li class="footer_section--title">
+                            <span class="centered-text">
+                                <span>A</span>
+                                <span>b</span>
+                                <span>o</span>
+                                <span>u</span>
+                                <span>t</span>
+                                <span> </span>
+                                <span>u</span>
+                                <span>s</span>
+                            </span>
+                         </li></a>
+            </footer>
+            </div>
+        <div id="sb" class="sidebar-back"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    </div>
+
+   
+</body>
+</html>
