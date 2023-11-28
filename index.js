@@ -10,9 +10,7 @@ function checkWindowSize() {
   const sendButton = document.getElementById('send-button');
   const chatMessages = document.querySelector('.chat-messages');
   const chatArea = document.getElementById("chat-area")
-  const lightThemeButton = document.getElementById("lightThemeButton");
   const darkThemeButton = document.getElementById("darkThemeButton");
-  const darkThemeButtonIcon = document.getElementById("darkThemeButtonIcon");
   // Пошук елементів header
   const containerHeaderElement = document.getElementById("container_header")
   const headerElement = document.getElementById("header");
@@ -29,6 +27,10 @@ function checkWindowSize() {
 
   const chatElement = document.getElementById("chat");
   const prologElement = document.getElementById("prolog");
+  const closeButton = document.getElementById('close-button'); // Додайте клас .closeButton до "хрестика" у вашому сайтбарі
+  const sidebar = document.querySelector('.sidebar');
+  const openSidebarButton = document.getElementById('openSidebar');
+  const closeXButton = document.querySelector('.close-button'); // Додайте клас .closeButton до "хрестика" у вашому сайтбарі
 
   let messageIdCounter = 1; // Лічильник для id
   // Визначаємо активну тему (по замовчуванню світла)
@@ -44,12 +46,8 @@ function checkWindowSize() {
       headerElement.classList.remove("dark-theme");
       headerElement.classList.add("light-theme");
 
-      lightThemeButton.classList.remove("dark-theme");
-      lightThemeButton.classList.add("light-theme");
-
       darkThemeButton.classList.remove("dark-theme-smile");
       darkThemeButton.classList.add("light-theme");
-      darkThemeButtonIcon.classList.remove("dark-theme-smile");
 
       buttonElement.classList.remove("dark-theme");
       buttonElement.classList.add("light-theme");
@@ -105,13 +103,9 @@ function checkWindowSize() {
       body.style.background = 'var(--theme-gradient)'
       headerElement.classList.remove("light-theme");
       headerElement.classList.add("dark-theme");
-
-      lightThemeButton.classList.remove("light-theme");
-      lightThemeButton.classList.add("dark-theme");
       
       darkThemeButton.classList.remove("light-theme");
       darkThemeButton.classList.add("dark-theme-smile");
-      darkThemeButtonIcon.classList.add("dark-theme-smile");
 
       buttonElement.classList.remove("light-theme");
       buttonElement.classList.add("dark-theme");
@@ -158,9 +152,19 @@ function checkWindowSize() {
 
   };
 
+  function ChangeTheme(){
+    if(isDarkThemeActive){
+      enableLightTheme()
+      darkThemeButton.classList.remove("active")
+
+    }
+    else{
+      darkThemeButton.classList.add("active")
+      enableDarkTheme()
+    }
+  }
   // Обробники подій для кнопок
-  lightThemeButton.addEventListener("click", enableLightTheme);
-  darkThemeButton.addEventListener("click", enableDarkTheme);
+  darkThemeButton.addEventListener("click", ChangeTheme);
 
   // Обробник для натискання кнопки "Надіслати"
 
@@ -330,10 +334,7 @@ let conversation = [];
       });
     });
 
-    const sidebar = document.querySelector('.sidebar');
-    const openSidebarButton = document.getElementById('openSidebar');
-    const closeXButton = document.querySelector('.close-button'); // Додайте клас .closeButton до "хрестика" у вашому сайтбарі
-    const closeButton = document.getElementById('close-button'); // Додайте клас .closeButton до "хрестика" у вашому сайтбарі
+
     // Функція для відкриття бару
     function openSidebar() {
       if (width < 768) {
@@ -397,18 +398,6 @@ let conversation = [];
         if (event.target !== sidebar && event.target !== openSidebarButton && event.target !== closeButton) {
             // Якщо клік був за межами сайтбару, і не було натиснуто на "хрестик", не закриваємо бар
         }
-  });
-  document.addEventListener('DOMContentLoaded', function () {
-      var newChatButton = document.querySelector('.new-chat-button');
-
-      newChatButton.addEventListener('click', function () {
-          // Створення нового елементу для чату
-          var newchat = document.createElement("div");
-          newchat.innerHTML = "<p>The new chat</p>";
-
-          // Додавання чату до сторінки
-          document.body.appendChild(newchat);
-      });
   });
 
   if(width < 768){

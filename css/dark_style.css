@@ -9,11 +9,6 @@
 .light-theme::placeholder {
     animation: light 0.5s ease forwards;
 }
-.dark-theme-smile{
-    fill: var(--dark-color);
-    animation: dark-smile 0.5s ease forwards;
-
-}
 .dark-theme-c {
     background: var(--theme-gradient);
     background-size: 200% 200%;
@@ -42,25 +37,6 @@
       background-color: var(--dark-color);
       fill: var(--white-color);
       color: var(--white-color);
-    }
-  }
-  @keyframes dark-smile {
-    from {
-        background-color: var(--white-color);
-        fill: var(--dark-purple-color);
-    }
-    to {
-      background-color: var(--dark-color);
-      fill: var(--dark-color);
-
-    }
-  }
-  @keyframes light-smile {
-    from {
-        background-color: var(--white-color);
-    }
-    to {
-      background-color: var(--dark-color);
     }
   }
   @keyframes light {

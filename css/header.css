@@ -12,21 +12,13 @@
     display: flex;
     border-bottom: 0.5px solid #000000;
     justify-content: space-between; 
-    text-align: center;
+    align-items: center;
     width: 100%;
     transition: var(--theme-transition);
 
 
 }
 .icon-menu {
-    display: flex;
-    margin-left: 12.5px;
-    fill: var(--white-color);
-    width: 35px;
-    height: 35px;
-    transition: var(--theme-transition);
-}
-.icon-menus {
     display: flex;
     margin-left: 12.5px;
     fill: var(--white-color);
@@ -76,12 +68,13 @@
 }
 .mood_section {
     display: flex;
+    align-items: center;
     flex-direction: row;
     justify-content: space-between;
 }
 .mood_section--button  {
     border: 0;
-    background-color: var(--white-color);
+    background-color: rgba(255, 0, 0, 0.0);
     cursor: pointer;
     transition: var(--theme-transition);
     
@@ -89,13 +82,6 @@
 .smile {
     fill: var(--main-gradient);
     padding: 5px;
-    transition: var(--theme-transition);
-}
-.light-smile {
-    fill: var(--white-color);
-    padding: 5px;
-    width: 40px;
-    height: 40px;
     transition: var(--theme-transition);
 }
 .dark-smile {
@@ -107,3 +93,61 @@
 .smile:hover {
     transform: translateY(-20px) scale(1.2);
 }
+.toggle-button {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .toggle-circle-black {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 26px;
+    background: var(--main-gradient);
+    background-size: 200% 200%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Тінь для об'ємності */
+    transition: transform 0.3s ease; /* Анімація переміщення */
+  }
+  .toggle-circle-white{
+    position: absolute;
+    top: 50%;
+    transform: translateX(-200%);
+    width: 26px;
+    height: 26px;
+    background: var(--theme-gradient);
+    background-size: 200% 200%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Тінь для об'ємності */
+    transition: transform 0.3s ease; /* Анімація переміщення */
+  }
+  .toggle-button.active .toggle-circle-black {
+    transform: translateX(100%);
+  }
+  .toggle-button.active .toggle-circle-white{
+    transform: translate(-100%,-50%);;
+  }
+@media screen and (max-width: 768px){
+    .header-button{
+        width: 40px;
+        height: 40px;
+    }
+    .icon-menu{
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+    }
+    .header_letter{
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .logo_name{
+        font-size: 2em;
+    }
+  }
