@@ -31,10 +31,27 @@ function checkWindowSize() {
   const sidebar = document.querySelector('.sidebar');
   const openSidebarButton = document.getElementById('openSidebar');
   const closeXButton = document.querySelector('.close-button'); // Додайте клас .closeButton до "хрестика" у вашому сайтбарі
+  const loginButton = document.getElementById('login-button'); 
+  const registrationButton = document.getElementById('register-button'); 
+
+  const loginElement = document.getElementById('login'); // Додайте клас .closeButton до "хрестика" у вашому сайтбарі
+  const registrationElement = document.getElementById('registration'); // Додайте клас .closeButton до "хрестика" у вашому сайтбарі
+
 
   let messageIdCounter = 1; // Лічильник для id
   // Визначаємо активну тему (по замовчуванню світла)
   let isDarkThemeActive = false;
+  let widthI = (width-500)/2 
+if(width>=768) {
+  loginElement.style.marginLeft = widthI + 'px';
+  registrationElement.style.marginLeft = widthI + 'px';
+
+}
+if(width < 768){
+  buttonUpElement.style.display ='none'
+  buttonDownElement.style.display ='none'
+
+}
 
   // Функція для включення світлої теми
   function enableLightTheme() {
@@ -337,6 +354,9 @@ let conversation = [];
 
     // Функція для відкриття бару
     function openSidebar() {
+      loginElement.style.display ='none'
+      registrationElement.style.display ='none'
+
       if (width < 768) {
         sidebar.style.left = '0';
         sidebar.style.width = width + 'px'
@@ -352,7 +372,6 @@ let conversation = [];
       inputContainerElement.style.transition = 'margin-left 3s ease';
       inputSectionElement.style.marginLeft = '3%';
       inputSectionElement.style.width = '70%'
-
       buttonElement.style.display = 'none'
       closeButton.style.display = 'inline'
       }
@@ -399,15 +418,18 @@ let conversation = [];
             // Якщо клік був за межами сайтбару, і не було натиснуто на "хрестик", не закриваємо бар
         }
   });
+  function openLoginForm(){
+    loginElement.style.display = "flex";
 
-  if(width < 768){
-    buttonUpElement.style.display ='none'
-    buttonDownElement.style.display ='none'
-
+    closeSidebar()
   }
-    
-    
-    
+  function openRegistrationForm(){
+    registrationElement.style.display = "flex";
+
+    closeSidebar()
+  }
+  loginButton.addEventListener('click', openLoginForm);
+  registrationButton.addEventListener('click', openRegistrationForm);    
   }
   
   // Викликати функцію при завантаженні сторінки та при зміні розміру вікна

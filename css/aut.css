@@ -1,19 +1,24 @@
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f5f5;
+.login {
+    height: 100%;
+    width: 100%;
 }
-
-.container {
+.container-login {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
     background-color: #3498db;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-}
+    width: 500px;
+    height: 300px;
+    margin-top: 150px;
+    transition:2000ms linear(0 0%, 0.22 2.1%, 0.86 6.5%, 1.11 8.6%, 1.3 10.7%, 1.35 11.8%, 1.37 12.9%, 1.37 13.7%, 1.36 14.5%, 1.32 16.2%, 1.03 21.8%, 0.94 24%, 0.89 25.9%, 0.88 26.85%, 0.87 27.8%, 0.87 29.25%, 0.88 30.7%, 0.91 32.4%, 0.98 36.4%, 1.01 38.3%, 1.04 40.5%, 1.05 42.7%, 1.05 44.1%, 1.04 45.7%, 1 53.3%, 0.99 55.4%, 0.98 57.5%, 0.99 60.7%, 1 68.1%, 1.01 72.2%, 1 86.7%, 1 100%);
+    animation: fadeIn 2s ease forwards;
 
+}
 .login-form {
     padding: 20px;
     display: flex;
@@ -21,13 +26,13 @@ body {
     align-items: center;
 }
 
-h1 {
+.h1-l {
     color: #fff;
     font-size: 24px;
     margin-bottom: 20px;
 }
 
-input {
+.input-l {
     width: 100%;
     padding: 10px;
     margin: 8px 0;
@@ -36,14 +41,14 @@ input {
     box-sizing: border-box;
 }
 
-a {
+.a-l {
     color: #fff;
     text-decoration: none;
     margin: 10px 0;
     font-size: 14px;
 }
 
-button {
+.button-sign-in {
     width: 100%;
     padding: 10px;
     background-color: #2980b9;
@@ -53,12 +58,17 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.button-sign-in:hover {
     background-color: #1f6697;
 }
 
-@media (min-width: 600px) {
-    .container {
-        width: 400px;
+@media (max-width: 767px) {
+    .container-login{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        border-radius: 0px;
+        animation: fadeIn 1s ease forwards;
+
     }
 }
